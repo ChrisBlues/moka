@@ -1,0 +1,15 @@
+MOKA landing page - images and fonts
+
+Unzip this next to your index.html so you have the img/ and fonts/ folders.
+
+Photos: CC0 (free for any use, no credit needed), found on Openverse:
+  img/hero.jpg  <-  Flat lay mocha coffee (rawpixel, CC0)  https://www.rawpixel.com/image/6040245/photo-image-public-domain-coffee-chocolate
+  img/about.jpg  <-  Free latte art coffee top (rawpixel, CC0)  https://www.rawpixel.com/image/5926452/photo-image-public-domain-art-hand
+  img/cappuccino.jpg  <-  Coffee Cappuccino by Hello Goodbye (stocksnap, CC0)  https://stocksnap.io/photo/coffee-cappuccino-UXO5P8KFS5
+  img/mocha.jpg  <-  Close-Up Cappuccino by Malidate Van (stocksnap, CC0)  https://stocksnap.io/photo/close-up-cappuccino-4WLGZBQUSG
+  img/cocoa.jpg  <-  Hot Chocolate by Tim Sullivan (stocksnap, CC0)  https://stocksnap.io/photo/hot-chocolate-NOXXUWUBGJ
+  img/user-1.jpg  <-  Smiling Woman by Matt Moloney (stocksnap, CC0)  https://stocksnap.io/photo/smiling-woman-W6GFOSFAXA
+  img/user-2.jpg  <-  Business Man by Direct Media (stocksnap, CC0)  https://stocksnap.io/photo/business-man-IVZBYWKEFM
+  img/user-3.jpg  <-  Beautiful Beauty by Jonas Svidras (stocksnap, CC0)  https://stocksnap.io/photo/beautiful-beauty-OGBFDCHPEZ
+
+Fonts: Bebas Neue and Poppins, SIL Open Font License (free to use), from Google Fonts.

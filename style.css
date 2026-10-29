@@ -1,0 +1,559 @@
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(fonts/bebas-neue.woff2);
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(fonts/poppins-400.woff2);
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(fonts/poppins-600.woff2);
+    font-weight: 600;
+}
+
+:root {
+    --bg: #5b3f2e;
+    --card: #6c4c39;
+    --dark: #3b2618;
+    --cream: #fbefe0;
+    --soft: #e0c8b2;
+    --accent: #f3d9b1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: "Poppins", sans-serif;
+}
+
+img {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 22px 8%;
+    background: var(--bg);
+    transition: box-shadow .3s;
+}
+
+.header.scrolled {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+}
+
+.logo {
+    font: 34px "Bebas Neue", sans-serif;
+    letter-spacing: 2px;
+    color: var(--accent);
+}
+
+.links {
+    display: flex;
+    gap: 32px;
+    margin-left: auto;
+}
+
+.links a {
+    opacity: 0.8;
+    transition: opacity .2s;
+}
+
+.links a:hover {
+    opacity: 1;
+}
+
+.cart {
+    padding: 10px 20px;
+    border-radius: 40px;
+    background: var(--accent);
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.cart b {
+    margin-left: 6px;
+}
+
+.burger {
+    display: none;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 50px 8% 100px;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+h1, h2 {
+    font: 34px "Bebas Neue", sans-serif;
+    font-weight: 400;
+    line-height: 0.95;
+}
+
+h1 {
+    font-size: 120px;
+    margin: 16px 0 24px;
+}
+
+.lead {
+    max-width: 470px;
+    color: var(--soft);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 36px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 34px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--accent);
+    color: var(--dark);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.ghost {
+    background: none;
+    color: var(--cream);
+    border: 2px solid var(--cream);
+}
+
+.stats {
+    display: flex;
+    gap: 48px;
+    margin-top: 56px;
+}
+
+.stats b {
+    display: block;
+    font: 44px "Bebas Neue", sans-serif;
+}
+
+.stats span {
+    color: var(--soft);
+    font-size: 14px;
+}
+
+.hero-img {
+    position: relative;
+}
+
+.hero-img > img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, .4);
+}
+
+.badge {
+    position: absolute;
+    left: -30px;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 22px;
+    border-radius: 18px;
+    background: var(--card);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .3);
+}
+
+.badge img {
+    width: 48px;
+    /* height: 48px; */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.badge p {
+    color: var(--soft);
+    font-size: 13px;
+}
+
+.stars::before {
+    content:"\2605\2605\2605\2605\2605";
+    display: block;
+    color: #f4b63f;
+    letter-spacing: 3px;
+}
+
+/* about */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+    padding: 110px 8%;
+    background: var(--cream);
+    color: var(--dark);
+}
+
+.about .eyebrow {
+    color: #a0673f;
+}
+
+h2 {
+    font-size: 72px;
+    margin: 14px 0 20px;
+}
+
+.about-text p {
+    line-height: 1.8;
+}
+
+.about .stats span {
+    color: #7a5a45;
+}
+
+.about > img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 200px 24px 24px 24px;
+}
+
+/* menu */
+.menu, .reviews {
+    padding: 110px 8%;
+}
+
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 44px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 24px;
+    background: var(--card);
+    transition: transform .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 22px 26px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+.card p {
+    margin: 4px 0 18px;
+    color: var(--soft);
+    font-size: 14px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row b {
+    color: var(--accent);
+    font-size: 24px;
+}
+
+.add {
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 30px;
+    background: var(--accent);
+}
+
+.add.done {
+    background: #a7d7ae;
+}
+
+/* reviews */
+.reviews {
+    background: var(--dark);
+}
+
+.score {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.review {
+    padding: 30px;
+    border: 1px solid rgba(251, 239, 224, .25);
+    border-radius: 22px;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.person img {
+    width: 54px;
+    /* height: 54px; */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* footer */
+.footer {
+    padding: 70px 8% 70px;
+    background: var(--cream);
+    color: var(--dark);
+}
+
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #d8c2ab;
+}
+
+.newsletter h2 {
+    margin: 0;
+    font-size: 56px;
+}
+
+.subscribe {
+    display: flex;
+    gap: 10px;
+}
+
+.subscribe input {
+    width: 300px;
+    padding: 16px 22px;
+    border: 1px solid #d8c2ab;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.subscribe p {
+    font-weight: 600;
+}
+
+.footer .btn {
+    background: var(--dark);
+    color: var(--cream);
+}
+
+.footer .logo {
+    color: var(--dark);
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px 0;
+}
+
+.columns p, .copy {
+    margin-top: 10px;
+    color: #7a5a45;
+    font-size: 14px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .8s, transform .8s;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: none;
+}
+
+/* Remerciements au concepteur */
+#thank-you-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  color: #333;
+  text-align: center;
+  padding: 15px;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 1s ease, transform 1s ease;
+  z-index: 1000;
+}
+
+#thank-you-footer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#thank-you-footer a{
+    text-decoration: underline;
+}
+
+
+@media (max-width: 900px) {
+    .hero, .about {
+        grid-template-columns: 1f;
+    }
+
+    h1 {
+        font-size: 84px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter, .columns {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        gap: 16px;
+        padding: 18px 6%;
+    }
+
+    .links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 6% 30px;
+        background: var(--bg);
+    }
+
+    .links.open {
+        display: flex;
+    }
+
+    .cart {
+        margin-left: auto;
+    }
+
+    .burger {
+        display: grid;
+        gap: 6px;
+        padding: 10px;
+        border: 0;
+        background: none;
+        cursor: pointer;
+    }
+
+    .burger span {
+        width: 26px;
+        height: 2px;
+        background: var(--cream);
+    }
+
+    .hero, .about, .menu, .reviews {
+        padding: 40px 6%;
+    }
+
+    h1 {
+        font-size: 64px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    .stats {
+        gap: 20px;
+    }
+
+    .badge {
+        left: 0;
+    }
+
+    .section-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .subscribe, .subscribe input {
+        width: 100%;
+    }
+
+    .subscribe {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
